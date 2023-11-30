@@ -81,7 +81,7 @@ const postLogin=async (req,res,next)=>{
                     return res.status(500).json({success:false,message:"Something Went wrong"})
                 }
                 if(result==true){
-                    res.status(200).json({message:'successfully user login',success:true,token:userService.generateAccesswebtoken(user.id,user.name)})
+                    res.status(202).json({message:'successfully user login',success:true,token:userService.generateAccesswebtoken(user.id,user.name)})
                 }
                 else{
                     res.status(401).json({success:false,message:"Check password incorrect"})
